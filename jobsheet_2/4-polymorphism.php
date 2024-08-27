@@ -29,9 +29,14 @@ class Mahasiswa extends Pengguna{
     }
 }
 
-// Instalasi Objek class Pengguna, Dosen, dan Mahasiswa
-$coba = [new Pengguna(), new Dosen(), new Mahasiswa()];
-foreach ($coba as $akses) {
-    echo $akses->aksesFitur();
+// Instalasi Objek class Dosen dan Mahasiswa
+function fitur(Pengguna $pengguna){
+    echo $pengguna->aksesFitur();
 }
+
+$dosen = new Dosen();
+$mahasiswa = new Mahasiswa();
+
+fitur($dosen);
+fitur($mahasiswa);
 ?>
