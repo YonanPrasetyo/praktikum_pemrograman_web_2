@@ -27,5 +27,6 @@ class Student extends Person{
     }
 }
 
-9
+$student = new Student("Yonan Prasetyo", "230102023");
+echo $student->getName();
 ?>
